@@ -11,7 +11,8 @@ func main() {
 
 	for i := 0; i < 5; i++ {
 		go func() {
-			fmt.Println(i)
+			j := i + i
+			fmt.Println(j)
 			wg.Done()
 		}()
 	}
